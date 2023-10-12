@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         cardCameraBtn = this.findViewById(R.id.cardCamera);
     }
 
-    public void  cardWebBtnPressed(View v){
+    public void  cardWebLinkBtnPressed(View v){
         Log.v("check","web clicked");
         Intent intent = new Intent(Intent.ACTION_VIEW,
         Uri.parse("https://www.google.com/"));
@@ -39,4 +39,12 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivity(intent);
     }
+
+    public  void  setCardWebBtn(View v){
+        Log.v("check","WebView clicked");
+        Intent explicitIntent = new Intent(getApplicationContext(),CardWebActivity.class);
+        startActivity(explicitIntent);
+    }
+
+
 }
