@@ -7,6 +7,7 @@ import android.app.Notification;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 
@@ -35,5 +36,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public void  cardCameraBtnPressed(View v){
         Log.v("check","camera clicked");
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivity(intent);
     }
 }
